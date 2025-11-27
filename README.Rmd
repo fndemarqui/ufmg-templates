@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # UFMG's Quarto Template for Writing Monographs, Dissertations and Thesis
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/fndemarqui/ufmg-templates/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/fndemarqui/ufmg-templates/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 
