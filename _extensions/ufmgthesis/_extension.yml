@@ -32,8 +32,8 @@ contributes:
       toc: true
       lof: true
       lot: true
-      code-block-border-left: "#cc0033"
-      code-block-bg: "#faf8f7"
+      ####code-block-border-left: "#cc0033"
+      ####code-block-bg: "#faf8f7"
       title-meta: "text"
     # html: default
     # docx:
