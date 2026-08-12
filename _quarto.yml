@@ -5,26 +5,49 @@ project:
 filters:
   - message.lua
 
+geometry:
+  - left=3cm
+  - top=3cm
+  - right=2cm
+  - bottom=3cm
+
 book:
+### aqui são os capitulos da sua dissertação que serão renderizados ###
+### comente/descomente adiciona ou remova conforme necessario ###
+### os arquivos criados aqui devem ser todos quarto (.qmd) ###
+### a ordem que eles aparecerão no texto é a mesma daqui ###
+
+### uma vez que você renderize qualquer um desses capitulos ###
+### o texto inteiro sera renderizado e será salvo na pasta `_text` ###
+
   date-format: "YYYY"
   chapters:
     - index.qmd
     - chapters/01-introducao.qmd
-    # - chapters/02-chapter-1.qmd
+    - chapters/02-chapter-1.qmd
     # - chapters/03-chapter-2.qmd
     # - chapters/04-discussion.qmd
     - chapters/05-bibliografia.qmd
     - chapters/06-glossario.qmd # not required
   output-file: text
   
-# Custom document type selector
 doc_type: thesis
+
+####### IMPORTANTE CASO VOCÊ QUEIRA SUA DISSERTAÇÃO EM INGLES::
+####### comente a linha de texto escrito `babel-language: brazil` do arquivo
+####### que esta em _extensions/_extensions.yml
+####### você pode mudar as cores do seus blocos de codigo no texto là também:
+      ####code-block-border-left: "#cc0033"
+      ####code-block-bg: "#faf8f7"
+
+### Mude todas as opções daqui de acordo com o seu perfil: ###
+### Estas opções serão usadas na capa e nas primeiras paginas do seu texto ###
 
 thesis:     # options: thesis | dissertation | monograph
   title: Template de Tese / Dissertação / Monografia Utilizando o Quarto 
 #  subtitle: A subtitle
   author: Fábio Nogueira Demarqui
-  date: 2025
+  date: 2026
   degree: Especialista # options: Doutor | Mestre | Especialista | Bacharel
   course: Ciência de Dados # options: Ciência de Dados | Estatística
   department: Departamento de Estatística
@@ -54,11 +77,12 @@ thesis:     # options: thesis | dissertation | monograph
 
 format:
   ufmgthesis-pdf:
-    page-crop: frame # cam, crop, frame
+    page-crop: crop # cam, crop, frame
     page-info: noinfo # info, noinfo
     lot: true # show list of tables? (not required)
     lof: true # show list of figures? (not required)
     linestretch: 1.5 # can be 1 or 1.5
+    indent: true
 
 fig-dpi: 800
 fig-align: center

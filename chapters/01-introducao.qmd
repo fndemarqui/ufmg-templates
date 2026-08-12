@@ -2,8 +2,19 @@
 title: Introdução
 number-sections: true
 ---
+## Usando o Quarto
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis condimentum lorem. Morbi in metus molestie, gravida lectus eu, rhoncus arcu. Proin lobortis ullamcorper massa quis volutpat. Pellentesque sollicitudin, sem vel porta volutpat, ante purus rutrum magna, sed placerat magna arcu ut metus. Nulla facilisi. Proin quis lorem tempor, rutrum sapien ut, egestas nisl. Nunc lacus lacus, aliquet sed felis sit amet, fringilla scelerisque turpis. Fusce semper felis et turpis laoreet mollis. Duis ullamcorper nisi sem, id sagittis arcu bibendum ac. Quisque semper nulla a sem placerat suscipit. Aenean vel massa nec erat blandit accumsan et non felis. Suspendisse nec bibendum ipsum. Fusce eu nibh convallis, rutrum sapien nec, feugiat ante [@bolliger2009full; @wickham2019welcome].
+Recomendo fortemente que você consulte o [manual de markdown do quarto](https://quarto.org/docs/authoring/markdown-basics.html)
+
+fique atento quando colocar varias imagens em sequencia pois elas podem ter problemas para renderizar
+
+Caso você esteja tendo problema com isso voce pode usar o `pagebreak`
+
+{{< pagebreak >}}
+
+## Usando o python
+
+Caso você deseje, também da pra usar em um mesmo arquivo quarto, codigos em R e em python. O manual do quarto explica melhor como configurar a engine de render do texto pra fazer isso, se você vai utilizar codigos em Python dentro da sua dissertação, recomendo que use o [Positron](https://positron.posit.co) pois ele lida melhor com os ambientes de python do que o Rstudio
 
 ## O Modelo de Regressão Linear Simples
 
@@ -11,8 +22,7 @@ O modelo de regressão linear simples é dado por:
 
 \begin{equation}
   y_{i} = \beta_{0} + \beta_{1}x_{i} + \epsilon_{i},
-\end{equation}
-para $i=1 \cdots, n$.
+\end{equation} para $i=1 \cdots, n$.
 
 ```{r}
 #| label: fig-scatterplot
@@ -31,10 +41,9 @@ ggplot(mtcars, aes(x = disp, y = mpg)) +
 
 O diagrama de dispersão do consumo de combustível (em milhas por galão) em função do deslocamento do motor (em polegadas cúbicas) é apresentado na @fig-scatterplot.
 
-:::callout-note
-O deslocamento do motor representa o volume total de ar que os pistões de um motor conseguem deslocar dentro dos cilindros em um ciclo completo. É uma forma de expressar a "cilindrada" de um motor, sendo uma indicação do seu tamanho e potência, comum em países que utilizam o sistema imperial de medidas. 
+::: callout-note
+O deslocamento do motor representa o volume total de ar que os pistões de um motor conseguem deslocar dentro dos cilindros em um ciclo completo. É uma forma de expressar a "cilindrada" de um motor, sendo uma indicação do seu tamanho e potência, comum em países que utilizam o sistema imperial de medidas.
 :::
-
 
 ```{r}
 #| label: tbl-reg
@@ -50,4 +59,3 @@ tidy(fit) |>
 ```
 
 A @tbl-reg fornece o sumário do modelo de regressão linear simples ajustado...
-
